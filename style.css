@@ -1,0 +1,116 @@
+/** ##### Import Fonts ##### **/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap');
+
+
+/** #####-#####-#####-#####-#####-#####-#####-#####-#####-##### **/ 
+
+
+/** ##### Global Variables ##### **/
+
+:root {
+
+    /** ### Color Variables ### **/
+    --clr-main-color: #7ECA9C;
+    --clr-secondary-color: #CCFFBD;
+    --clr-background-color: #40394A;
+    --clr-very-dark-color: #1C1427;
+    --clr-very-light-color: #fafafa;
+
+    /** ### Other Variables ### **/
+    --br-radius: 4px;
+
+}
+
+
+/** #####-#####-#####-#####-#####-#####-#####-#####-#####-##### **/ 
+
+
+/** ##### Global Styles ##### **/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+
+/** #####-#####-#####-#####-#####-#####-#####-#####-#####-##### **/ 
+
+
+/** ##### Global Styles ##### **/
+
+.main {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: var(--clr-background-color);
+    color: var(--clr-very-light-color);
+}
+
+.cipher {
+    padding: 25px;
+    box-shadow: 8px 8px 35px 0px rgb(0 0 0 / 75%);
+    border-radius: var(--br-radius);
+}
+
+.cipher__title {
+    font-size: 3rem;
+}
+
+#original-input, #result {
+    background-color: var(--clr-very-dark-color);
+}
+
+#original-input {
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 10px;
+    color: var(--clr-very-light-color);
+    border-top-left-radius: var(--br-radius);
+    border-top-right-radius: var(--br-radius);
+}
+
+#result {
+    height: 20px;
+    color: var(--clr-main-color);
+    padding:  0 10px 10px;
+    border-bottom-left-radius: var(--br-radius);
+    border-bottom-right-radius: var(--br-radius);
+}
+
+.cipher__range {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    text-align: center;
+    align-items: center;
+}
+
+input[type='range'] {
+    appearance: none;
+    border-radius: var(--br-radius);
+    background-color: var(--clr-very-dark-color);
+    padding: 0 5px;
+    height: 10px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    cursor: pointer;
+    appearance: none;
+    background: var(--clr-very-light-color);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}

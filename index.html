@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <section class="cipher">
+            <h1 class="cipher__title">Caesar Cipher.</h1>
+            <form id="cipher" autocomplete="off">
+                <input type="text" name="text" spellcheck="false" placeholder="Ingrese el texto" id="original-input">
+            </form>
+            <div id="result"></div>
+            <div class="cipher__range">
+                <input type="range" id="range" value="10" min="1" max="20" oninput="this.nextElementSibling.value = this.value">
+                <output>10</output>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
